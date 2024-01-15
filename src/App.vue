@@ -1,12 +1,16 @@
 <script setup>
   import menuNav from './components/menuNav.vue'
+  import bottomPage from './components/footer.vue'
 </script>
 
 <template>
-      <div>
+      <header>
         <menuNav />
-      </div>
+      </header>
       <router-view/>
+      <footer>
+        <bottomPage />
+      </footer>
 </template>
 
 <style scoped>

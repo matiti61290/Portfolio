@@ -12,7 +12,6 @@
             <router-link id="top_menu" to="/mesCreations"><img id="header_icon" src="../../public/satellite.png" alt="satellite">Mes creations</router-link>
             <router-link id="top_menu" to="/contact"><img id="header_icon" src="../../public/satellite.png" alt="satellite">Contact</router-link>
         </nav>
-        <!-- <router-view/> -->
     </div>
 </template>
 
