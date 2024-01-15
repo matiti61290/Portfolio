@@ -3,11 +3,10 @@
 </script>
 
 <template>
-    <header>
       <div>
         <menuNav />
       </div>
-    </header>
+      <router-view/>
 </template>
 
 <style scoped>
