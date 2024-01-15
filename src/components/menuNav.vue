@@ -4,14 +4,15 @@
 
 <template>
     <div id="top_page">
-        <a id="home" href="../../index.html">
-            <img id="home_picture" src="../../public/home_icon.png" alt="icone planete">
-        </a>
         <nav>
-            <li><a id="top_menu" href=""><img id="header_icon" src="../../public/satellite.png" alt="satellite"> A propos de moi</a></li>
-            <li><a id="top_menu" href=""><img id="header_icon" src="../../public/satellite.png" alt="satellite"> Mes creations</a></li>
-            <li><a id="top_menu" href=""><img id="header_icon" src="../../public/satellite.png" alt="satellite"> Contact</a></li>
+            <router-link id="home" to="/">
+            <img id="home_picture" src="../../public/home_icon.png" alt="icone planete">
+            </router-link>
+            <router-link id="top_menu" to="/aboutMe"><img id="header_icon" src="../../public/satellite.png" alt="satellite"> A propos de moi</router-link>
+            <router-link id="top_menu" to="/mesCreations"><img id="header_icon" src="../../public/satellite.png" alt="satellite">Mes creations</router-link>
+            <router-link id="top_menu" to="/contact"><img id="header_icon" src="../../public/satellite.png" alt="satellite">Contact</router-link>
         </nav>
+        <!-- <router-view/> -->
     </div>
 </template>
 
@@ -22,7 +23,6 @@
 #top_page{
     margin-top: 1.5em;
     margin-left: 1.5em;
-    display: flex;
     box-sizing: inherit;
 
 }
@@ -57,28 +57,15 @@
 nav{
     display: flex;
     flex-direction: row;
+    height: 100px;
     margin-left: auto;
     margin-right: 30em;
     list-style: none;
     border: 50px;
     background: transparent;
     transition: 0.4s;
-}
 
-li{
-    padding-right: 20px;
-    border: 50px;
-    background: transparent;
-}
-
-a{
-    width: auto;
-    text-decoration: none;
-    font-family: 'Trispace';
-    font-size: 1.5em;
-    color: white;
-    display: flex;
-    align-items: center;
+    gap: 30px;
 }
 
 #header_icon{
@@ -92,6 +79,16 @@ a{
     padding: 15px;
     border-radius: 50px;
     transition: 0.3s;
+
+
+    /* text */
+    display: flex;
+    align-items: center;
+    font-family: 'Trispace';
+    font-size: 1.5em;
+    color: white;
+    width: 10em;
+    text-decoration: none;
 }
 
 #top_menu:hover{
