@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from '../views/home.vue';
+import home from '../App.vue';
 import aboutMe from '../views/aboutMe.vue';
 import mesCreations from '../views/myCreation.vue';
 import Contact from '../views/contact.vue';
 
 const routes = [
     {
-    name: 'Home',
+    name: 'home',
     path:'/',
-    component: Home,
+    component: home,
     },
     {
         name: 'About me',
