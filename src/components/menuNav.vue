@@ -1,16 +1,16 @@
-<script setup>
+<script >
 
 </script>
 
 <template>
     <div id="top_page">
+        <a href="top_page" id="home">
+                <img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete">
+        </a>
         <nav>
-            <router-link id="home" to="/">
-            <img id="home_picture" src="../../public/home_icon.png" alt="icone planete">
-            </router-link>
-            <router-link id="top_menu" to="/aboutMe"><img id="header_icon" src="../../public/satellite.png" alt="satellite"> A propos de moi</router-link>
-            <router-link id="top_menu" to="/mesCreations"><img id="header_icon" src="../../public/satellite.png" alt="satellite">Mes creations</router-link>
-            <router-link id="top_menu" to="/contact"><img id="header_icon" src="../../public/satellite.png" alt="satellite">Contact</router-link>
+            <a href="about-me" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite"> A propos de moi</a>
+            <a href="mes-creations" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Mes creations</a>
+            <a href="***" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Contact</a>
         </nav>
     </div>
 </template>
@@ -23,7 +23,7 @@
     margin-top: 1.5em;
     margin-left: 1.5em;
     box-sizing: inherit;
-
+    background: none;
 }
 
 #home{
@@ -32,6 +32,8 @@
     height: auto;
     transition: 0.1s;
     margin-right: 2em;
+    position: fixed;
+    background: none;
 }
 
 #home:hover{
@@ -45,6 +47,8 @@
     height: auto;
     float: left;
     transition: 0.1s;
+
+    background: none;
 }
 
 #home_picture:hover{
@@ -57,14 +61,14 @@ nav{
     display: flex;
     flex-direction: row;
     height: 100px;
-    margin-left: auto;
+    /* margin-left: auto; */
     margin-right: 30em;
     list-style: none;
     border: 50px;
     background: transparent;
     transition: 0.4s;
-
     gap: 30px;
+    padding-left: 10em;
 }
 
 #header_icon{
@@ -78,7 +82,6 @@ nav{
     padding: 15px;
     border-radius: 50px;
     transition: 0.3s;
-
 
     /* text */
     display: flex;

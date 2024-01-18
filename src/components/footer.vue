@@ -4,8 +4,8 @@
 <template>
     <div id="footer">
         <div>
-            <a target="_blank" href="https://github.com/matiti61290"><img id="github" src="../../public/signe-github.png" alt=""></a>
-            <a target="_blank" href="https://www.linkedin.com/in/mathieu-barbey-bb0559228/"><img src="../../public/linkedin.png" alt=""></a>
+            <a target="_blank" href="https://github.com/matiti61290"><img id="github" src="../assets/img/signe-github.png" alt=""></a>
+            <a target="_blank" href="https://www.linkedin.com/in/mathieu-barbey-bb0559228/"><img src="../assets/img/linkedin.png" alt=""></a>
         </div>
         <div>
             <p>Dernière mise à jour le: 15 janvier 2024.</p>
