@@ -22,7 +22,7 @@ const emit = defineEmits(["modal-close"]);
           </slot>
         </div>
         <div class="modal-body">
-          <slot name="header">
+          <slot name="content">
             Default
           </slot>
         </div>
