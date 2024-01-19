@@ -5,14 +5,20 @@ import bottomPage from './components/footer.vue'
 import { ref } from "vue";
 import Modal from "./components/Modal.vue";
 
-const isModalOpened = ref(false);
+const modals = ref({
+  cv:{ visible: false },
+  cc:{ visible: false },
+  comm:{ visible: false}
+});
 
-const openModal = () => {
-  isModalOpened.value = true;
+const openModal = (modals) => {
+  modals.visible = true;
 };
-const closeModal = () => {
-  isModalOpened.value = false;
-};
+
+const closeModal = (modals) => {
+  modals.visible = false;
+}
+
 </script>
 
 <template>
@@ -32,29 +38,26 @@ const closeModal = () => {
           <div  class="creation">
             <div class="creation-detail">
               <h2>Mon CV en HTML</h2>
-              <img @click="openModal" src="./assets/img/cv.png" alt="">
-                  <Modal :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
+              <img @click="openModal(modals.cv)" src="./assets/img/cv.png" alt="">
+                  <Modal v-if="modals.cv.visible" @modal-close="closeModal(modals.cv)" name="first-modal">
                     <template #header>Custom header</template>
-                    <template #content>Custom content</template>
+                    <template #content>Au revoir</template>
                     <template #footer>Custom content</template>
                   </Modal>
             </div>
             <div class="creation-detail">
               <h2>Exemple de cahier des charges</h2>
-              <img @click="openModal" src="./assets/img/bloc-notes.png" alt="">
-              <Modal :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
-                <template #content>
-                  <p>Bonjour</p>
-                  <p>ca va</p>
-                </template>
+              <img @click="openModal(modals.cc)" src="./assets/img/bloc-notes.png" alt="">
+              <Modal v-if="modals.cc.visible" @modal-close="closeModal(modals.cc)" name="second-modal">
+                <template #content>Bonjour</template>
               </Modal>
             </div>
             <div class="creation-detail">
               <h2>Dynamiser un espace de commentaire</h2>
-              <img @click="openModal" src="./assets/img/commentaires.png" alt="">
-              <Modal :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
+              <img  @click="openModal(modals.comm)" src="./assets/img/commentaires.png" alt="">
+              <Modal v-if="modals.comm.visible" @modal-close="closeModal(modals.comm)" name="third-modal">
                 <template #content>
-                  <!-- add content here -->
+                  add content here
                 </template>
               </Modal>
             </div>

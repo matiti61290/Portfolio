@@ -2,29 +2,21 @@
 import { defineProps, defineEmits, ref } from "vue";
 import {onClickOutside} from '@vueuse/core'
 
-const props = defineProps({
-  isOpen: Boolean,
-});
-
 const emit = defineEmits(["modal-close"]);
 
-// const target = ref(null)
-// onClickOutside(target, ()=>emit('modal-close'))
+const target = ref(null)
+onClickOutside(target, ()=>emit('modal-close'))
 
 </script>
 
 <template>
-  <div v-if="isOpen" class="modal-mask" @click.self="emit('modal-close')">
+  <div class="modal-mask">
       <div class="modal-container" ref="target">
         <div class="modal-header">
-          <slot name="header">
-            Default
-          </slot>
+          <slot name="header"></slot>
         </div>
         <div class="modal-body">
-          <slot name="content">
-            Default
-          </slot>
+          <slot name="content"></slot>
         </div>
         <div class="modal-footer">
           <slot name="footer">
