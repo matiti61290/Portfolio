@@ -20,8 +20,8 @@ onClickOutside(target, ()=>emit('modal-close'))
         </div>
         <div class="modal-footer">
           <slot name="footer">
-            <div>
-              <button @click.stop="emit('modal-close')">Submit</button>
+            <div class="modal-footer">
+              <button @click.stop="emit('modal-close')">Retour</button>
             </div>
           </slot>
           </div>
@@ -37,15 +37,53 @@ onClickOutside(target, ()=>emit('modal-close'))
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(179, 0, 0);
+  background-color: rgba(32, 86, 115, 0.7);
 }
 .modal-container {
-  width: 300px;
-  margin: 150px auto;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  height: auto;
+  width: 800px;
+  margin: 250px auto;
   padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgb(61, 255, 61);
+  background-color:#1b1b1b;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px #1b1b1b;
+  gap: 50px;
+}
+
+.modal-header{
+  background-color: #205673;
+  border-radius: 50px;
+  width: auto;
+  height: auto;
+  /* padding: 20px; */
+  box-shadow: 0 0 10px 0 #205673;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.modal-body{
+  background-color: #205673;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 0 #205673;
+}
+
+.modal-footer{
+  background:none;
+}
+
+button{
+  color: white;
+  font-family: trispace;
+  font-size: 1.5em;
+  background-color: #205673;
+  border-radius: 50px;
+  width: 5em;
+  height: 2em;
+  box-shadow: 0 0 10px 0 #205673;
+  border: none;
 }
 
 </style>
