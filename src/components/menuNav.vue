@@ -4,12 +4,12 @@
 
 <template>
     <div id="top_page">
-        <a href="top_page" id="home">
+        <a href="#top_page" id="home">
                 <img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete">
         </a>
         <nav>
-            <a href="about-me" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite"> A propos de moi</a>
-            <a href="mes-creations" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Mes creations</a>
+            <a href="#about-me" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite"> A propos de moi</a>
+            <a href="#mes-creations" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Mes creations</a>
             <a href="***" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Contact</a>
         </nav>
     </div>
