@@ -1,35 +1,25 @@
-import { createRouter, createWebHistory } from "vue-router";
-import home from '../App.vue';
-import aboutMe from '../views/aboutMe.vue';
-import mesCreations from '../views/myCreation.vue';
-import Contact from '../views/contact.vue';
+import { createRouter, createWebHashHistory } from "vue-router";
+import home from '../components/home.vue';
+import errorPage from '../views/errorPage.vue'
 
 const routes = [
     {
     name: 'home',
     path:'/',
-    component: home,
+    component: home
     },
     {
-        name: 'About me',
-        path:'/aboutMe',
-        component: aboutMe,
+    name: 'NotFound',
+    path: '/:pathMatch(.*)*',
+    component: errorPage
     },
-    {
-        name: 'Mes creations',
-        path:'/mesCreations',
-        component: mesCreations,
-    },
-    {
-        name: 'Contact',
-        path:'/contact',
-        component: Contact,
-    }
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 })
+
+router.push({name: 'NotFound'});
 
 export default router;
