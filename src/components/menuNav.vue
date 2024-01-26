@@ -4,7 +4,6 @@
 
 <template>
     <div id="home">
-        <!-- <routerLink to="/" id="home_button"><img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete"></routerLink> -->
         <a href="#top" id="home_button">
             <img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete">
         </a>
