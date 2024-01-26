@@ -56,7 +56,7 @@ const closeModal = (modals) => {
             </template>
             <template #content>
               <p>Créé le: 2 décembre 2023</p>
-              <p>Lien PDF: <a href="./pdf/cahierDesCharges.pdf" target="_blank">Cahier des charges La
+              <p>Lien PDF: <a href="../../public/pdf/cahierDesCharges.pdf" target="_blank">Cahier des charges La
                   Socketterie</a></p>
             </template>
             <template class="modal" #footer></template>
