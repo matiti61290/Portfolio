@@ -3,9 +3,10 @@
 </script>
 
 <template>
-    <div id="top_page">
-        <a href="#top_page" id="home">
-                <img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete">
+    <div id="home">
+        <!-- <routerLink to="/" id="home_button"><img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete"></routerLink> -->
+        <a href="#top" id="home_button">
+            <img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete">
         </a>
         <nav>
             <a href="#about-me" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite"> A propos de moi</a>
@@ -19,14 +20,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@600&display=swap');
 
-#top_page{
+#home{
     margin-top: 1.5em;
     margin-left: 1.5em;
     box-sizing: inherit;
     background: none;
 }
 
-#home{
+#home_button{
     width: 6.5em;
     border: 50px;
     height: auto;
@@ -36,7 +37,7 @@
     background: none;
 }
 
-#home:hover{
+#home_button:hover{
     width: 9em;
     height: auto;
     transition: 0.4s;
@@ -96,5 +97,6 @@ nav{
 #top_menu:hover{
     background-color: #31305dff;
     transition: 0.3s;
+    width: 10em;
 }
 </style>
