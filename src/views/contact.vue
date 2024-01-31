@@ -74,17 +74,23 @@ label{
 }
 
 input{
-  background-color: rgb(148, 148, 148);
+  background-color: #8eadbd;
   border-color: black;
   border-radius: 50px;
   width: 40%;
+  font-family: Trispace;
+  padding-left: 10px;
 }
 
 textarea{
-  background-color: rgb(148, 148, 148);
+  background-color: #8eadbd;
   border-color: black;
   border-radius: 10px;
   height: 15em;
+  font-family: Trispace;
+  padding-left: 10px;
+  padding-top: 5px;
+  color: rgb(0, 0, 0);
 }
 
 button{

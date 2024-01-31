@@ -19,6 +19,7 @@ const closeModal = (modals) => {
 </script>
 
 <template>
+  <img src="../" alt="">
   <main>
     <div id="about-me">
       <h1><img class="icon" src="../assets/img/about_icon.png" alt="about me icon">A propos de moi</h1>
@@ -34,7 +35,7 @@ const closeModal = (modals) => {
       <div class="creation">
         <div class="creation-detail">
           <h2>Mon CV en HTML</h2>
-          <img @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
+          <img id="modal-image" @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
           <Modal v-if="modals.cv.visible" @modal-close="closeModal(modals.cv)" name="first-modal">
             <template class="modal" #header>
               <h3>Mon CV en HTML</h3>
@@ -50,7 +51,7 @@ const closeModal = (modals) => {
         </div>
         <div class="creation-detail">
           <h2>Exemple de cahier des charges</h2>
-          <img @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
+          <img id="modal-image" @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
           <Modal v-if="modals.cc.visible" @modal-close="closeModal(modals.cc)" name="second-modal">
             <template #header>
               <h3>Exemple de cahier des charges</h3>
@@ -65,7 +66,7 @@ const closeModal = (modals) => {
         </div>
         <div class="creation-detail">
           <h2>Dynamiser un espace de commentaire</h2>
-          <img @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
+          <img id="modal-image" @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
           <Modal v-if="modals.comm.visible" @modal-close="closeModal(modals.comm)" name="third-modal">
             <template #header>
               <h3>Dynamiser un espace commentaire</h3>
@@ -141,6 +142,17 @@ main{
   background-color: inherit;
 }
 
+#modal-image{
+  width: 60px;
+  margin-bottom: 30px;
+  background-color: inherit;
+}
+
+#modal-image:hover{
+  width: 100px;
+  transition: 0.5s;
+}
+
 h1{
   background-color: #205673;
   width: auto;
@@ -158,7 +170,7 @@ h2{
 img{
   width: 60px;
   margin-bottom: 30px;
-  background-color: inherit; 
+  background-color: inherit;
 }
 
 h3{
