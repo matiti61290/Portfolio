@@ -58,7 +58,6 @@ onClickOutside(target, ()=>emit('modal-close'))
   border-radius: 50px;
   width: auto;
   height: auto;
-  /* padding: 20px; */
   box-shadow: 0 0 10px 0 #205673;
   text-align: center;
   font-size: 1.7em;

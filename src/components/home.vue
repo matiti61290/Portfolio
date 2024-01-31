@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import Modal from "./Modal.vue";
+import contactForm from "../views/contact.vue"
 
 const modals = ref({
   cv:{ visible: false },
@@ -82,6 +83,10 @@ const closeModal = (modals) => {
         </div>
       </div>
     </div>
+    <div id="Contact">
+
+      <contactForm />
+    </div>
   </main>
 </template>
 
@@ -113,7 +118,8 @@ main{
   background-color: #205673;
   padding-top: 10px;
   padding-left: 10px;
-  height: 330px;
+  padding-bottom: 50px;
+  height: auto;
   font-family: trispace;
   color: white;
   border-radius: 50px;
@@ -124,6 +130,7 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 400px;
 }
 
 .creation{
@@ -173,4 +180,6 @@ a{
   color: white;
   text-decoration: dashed;
 }
+
+
 </style>
