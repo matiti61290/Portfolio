@@ -55,6 +55,17 @@ h1{
   padding-left: 10px;
 }
 
+#contact h1{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 1s;
+}
+
+#contact:hover h1{
+  transition: 2s;
+  text-decoration-color: white;
+}
+
 img{
   width: 60px;
   background-color: inherit; 
@@ -74,17 +85,23 @@ label{
 }
 
 input{
-  background-color: rgb(148, 148, 148);
+  background-color: #8eadbd;
   border-color: black;
   border-radius: 50px;
   width: 40%;
+  font-family: Trispace;
+  padding-left: 10px;
 }
 
 textarea{
-  background-color: rgb(148, 148, 148);
+  background-color: #8eadbd;
   border-color: black;
   border-radius: 10px;
   height: 15em;
+  font-family: Trispace;
+  padding-left: 10px;
+  padding-top: 5px;
+  color: rgb(0, 0, 0);
 }
 
 button{
