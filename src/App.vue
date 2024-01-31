@@ -5,7 +5,7 @@ import bottomPage from './components/footer.vue'
 
 <template>
   <menuNav />
-  <RouterView/>
+  <RouterView />
   <bottomPage />
 </template>
 

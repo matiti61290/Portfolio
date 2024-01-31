@@ -61,7 +61,6 @@ nav{
     display: flex;
     flex-direction: row;
     height: 100px;
-    /* margin-left: auto; */
     margin-right: 30em;
     list-style: none;
     border: 50px;
@@ -98,4 +97,5 @@ nav{
     transition: 0.3s;
     width: 10em;
 }
+
 </style>

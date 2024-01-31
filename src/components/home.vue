@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import Modal from "./Modal.vue";
+import contactForm from "../views/contact.vue"
 
 const modals = ref({
   cv:{ visible: false },
@@ -18,6 +19,7 @@ const closeModal = (modals) => {
 </script>
 
 <template>
+  <img src="../" alt="">
   <main>
     <div id="about-me">
       <h1><img class="icon" src="../assets/img/about_icon.png" alt="about me icon">A propos de moi</h1>
@@ -33,7 +35,7 @@ const closeModal = (modals) => {
       <div class="creation">
         <div class="creation-detail">
           <h2>Mon CV en HTML</h2>
-          <img @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
+          <img id="modal-image" @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
           <Modal v-if="modals.cv.visible" @modal-close="closeModal(modals.cv)" name="first-modal">
             <template class="modal" #header>
               <h3>Mon CV en HTML</h3>
@@ -49,7 +51,7 @@ const closeModal = (modals) => {
         </div>
         <div class="creation-detail">
           <h2>Exemple de cahier des charges</h2>
-          <img @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
+          <img id="modal-image" @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
           <Modal v-if="modals.cc.visible" @modal-close="closeModal(modals.cc)" name="second-modal">
             <template #header>
               <h3>Exemple de cahier des charges</h3>
@@ -64,7 +66,7 @@ const closeModal = (modals) => {
         </div>
         <div class="creation-detail">
           <h2>Dynamiser un espace de commentaire</h2>
-          <img @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
+          <img id="modal-image" @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
           <Modal v-if="modals.comm.visible" @modal-close="closeModal(modals.comm)" name="third-modal">
             <template #header>
               <h3>Dynamiser un espace commentaire</h3>
@@ -81,6 +83,9 @@ const closeModal = (modals) => {
           </Modal>
         </div>
       </div>
+    </div>
+    <div id="Contact">
+      <contactForm />
     </div>
   </main>
 </template>
@@ -103,6 +108,17 @@ main{
   margin-bottom: 50px;
 }
 
+#about-me h1{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 1s;
+}
+
+#about-me:hover h1{
+  transition: 2s;
+  text-decoration-color: white;
+}
+
 .icon{
   margin: 0px;
   float: left;
@@ -113,17 +129,31 @@ main{
   background-color: #205673;
   padding-top: 10px;
   padding-left: 10px;
-  height: 330px;
+  padding-bottom: 50px;
+  height: auto;
   font-family: trispace;
   color: white;
   border-radius: 50px;
+}
+
+#mes-creations h1{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 1s;
+}
+
+#mes-creations:hover h1{
+  transition: 2s;
+  text-decoration-color: white;
 }
 
 .creation-detail{
   background-color: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center ;
+  width: 400px;
 }
 
 .creation{
@@ -132,6 +162,21 @@ main{
   justify-content: space-around;
   align-items: center;
   background-color: inherit;
+}
+
+#modal-image{
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+#modal-image:hover{
+  width: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #31305dff;
+  border-radius: 50px;
+  padding: 5px 5px;
+  box-shadow: 8px 8px 5px 10px #31305dff;
 }
 
 h1{
@@ -145,13 +190,14 @@ h1{
 
 h2{
   background-color: #205673;
+  height: 60px;
   font-size: 1.5em;
 }
 
 img{
   width: 60px;
   margin-bottom: 30px;
-  background-color: inherit; 
+  background-color: inherit;
 }
 
 h3{
@@ -173,4 +219,6 @@ a{
   color: white;
   text-decoration: dashed;
 }
+
+
 </style>
