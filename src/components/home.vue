@@ -85,7 +85,6 @@ const closeModal = (modals) => {
       </div>
     </div>
     <div id="Contact">
-
       <contactForm />
     </div>
   </main>
@@ -109,6 +108,17 @@ main{
   margin-bottom: 50px;
 }
 
+#about-me h1{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 1s;
+}
+
+#about-me:hover h1{
+  transition: 2s;
+  text-decoration-color: white;
+}
+
 .icon{
   margin: 0px;
   float: left;
@@ -126,11 +136,23 @@ main{
   border-radius: 50px;
 }
 
+#mes-creations h1{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 1s;
+}
+
+#mes-creations:hover h1{
+  transition: 2s;
+  text-decoration-color: white;
+}
+
 .creation-detail{
   background-color: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center ;
   width: 400px;
 }
 
@@ -145,12 +167,16 @@ main{
 #modal-image{
   width: 60px;
   margin-bottom: 30px;
-  background-color: inherit;
 }
 
 #modal-image:hover{
   width: 100px;
   transition: 0.5s;
+  cursor: pointer;
+  background-color: #31305dff;
+  border-radius: 50px;
+  padding: 5px 5px;
+  box-shadow: 8px 8px 5px 10px #31305dff;
 }
 
 h1{
@@ -164,6 +190,7 @@ h1{
 
 h2{
   background-color: #205673;
+  height: 60px;
   font-size: 1.5em;
 }
 

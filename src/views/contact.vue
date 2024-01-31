@@ -55,6 +55,17 @@ h1{
   padding-left: 10px;
 }
 
+#contact h1{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 1s;
+}
+
+#contact:hover h1{
+  transition: 2s;
+  text-decoration-color: white;
+}
+
 img{
   width: 60px;
   background-color: inherit; 
