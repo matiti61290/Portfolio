@@ -1,6 +1,7 @@
 <script>
   import emailjs from '@emailjs/browser';
-  import {ref} from "vue"
+
+  emailjs.init('1oFyPt_ixXmtaAEqV');
 
   const serviceId = import.meta.env.VITE_SERVICE_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
@@ -9,7 +10,14 @@
 export default {
   data() {
     return {
-    checkMessage: false
+      formData: {
+        user_name: '',
+        user_email: '',
+        object: '',
+        message: ''
+      },
+    successMessage: false,
+    failMessage: false
     }
   },
   methods: {
@@ -17,9 +25,12 @@ export default {
       emailjs.sendForm(serviceId, templateId, this.$refs.form, publicKey)
         .then((result) => {
             console.log('SUCCESS!', result.text);
-            this.checkMessage = true;
+            this.successMessage = true;
+            this.formData = {user_name: '', user_email: '', message: ''}
         }, (error) => {
             console.log('FAILED...', error.text);
+            this.failMessage = true;
+            this.formData = {user_name: '', user_email: '', object:'', message: ''}
         });
     },
   },
@@ -30,15 +41,20 @@ export default {
   <div id="contact">
     <h1 id="contact-title"><img src="../assets/img/message_icon.png" alt="">Contact</h1>
     <form ref="form" @submit.prevent="sendEmail">
-        <div v-if="checkMessage">
-          <p>Success</p>
+        <div v-if="successMessage">
+          <p>Votre mail est envoyé</p>
         </div>
-        <label>Name</label>
-        <input type="text" name="user_name">
-        <label>Email</label>
-        <input type="email" name="user_email">
+        <div v-if="failMessage">
+          <p>Votre mail n'a pas pu etre envoye</p>
+        </div>
+        <label>Nom</label>
+        <input type="text" name="user_name" v-model="formData.user_name">
+        <label>Mail</label>
+        <input type="email" name="user_email" v-model="formData.user_email">
+        <label>Objet</label>
+        <input type="text" name="object" v-model="formData.object">
         <label>Message</label>
-        <textarea name="message"></textarea>
+        <textarea name="message" v-model="formData.message"></textarea>
         <button type="submit"><img id="button-image" src="../assets/img/message-button.png" alt="">Envoyer</button>
     </form>
   </div>
@@ -137,4 +153,11 @@ button{
   background-color: #20567300;
 }
 
+div{
+  background: none;
+}
+
+p{
+  background: inherit;
+}
 </style>
