@@ -1,21 +1,29 @@
 <script>
-    import emailjs from '@emailjs/browser';
+  import emailjs from '@emailjs/browser';
+  import {ref} from "vue"
 
-    const serviceId = import.meta.env.VITE_SERVICE_ID;
-    const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
 export default {
+  data() {
+    return {
+    checkMessage: false
+    }
+  },
   methods: {
     sendEmail() {
       emailjs.sendForm(serviceId, templateId, this.$refs.form, publicKey)
         .then((result) => {
             console.log('SUCCESS!', result.text);
+            // this.checkMessage = true;
         }, (error) => {
             console.log('FAILED...', error.text);
+            this.checkMessage = true;
         });
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -23,6 +31,9 @@ export default {
   <div id="contact">
     <h1 id="contact-title"><img src="../assets/img/message_icon.png" alt="">Contact</h1>
     <form ref="form" @submit.prevent="sendEmail">
+        <div v-if="checkMessage">
+          <p>Success</p>
+        </div>
         <label>Name</label>
         <input type="text" name="user_name">
         <label>Email</label>
