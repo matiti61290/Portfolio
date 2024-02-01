@@ -17,10 +17,9 @@ export default {
       emailjs.sendForm(serviceId, templateId, this.$refs.form, publicKey)
         .then((result) => {
             console.log('SUCCESS!', result.text);
-            // this.checkMessage = true;
+            this.checkMessage = true;
         }, (error) => {
             console.log('FAILED...', error.text);
-            this.checkMessage = true;
         });
     },
   },
