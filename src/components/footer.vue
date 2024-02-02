@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
     <div id="footer">
         <div>
@@ -8,7 +5,7 @@
             <a target="_blank" href="https://www.linkedin.com/in/mathieu-barbey-bb0559228/"><img src="../assets/img/linkedin.png" alt=""></a>
         </div>
         <div>
-            <p>Dernière mise à jour le: 15 janvier 2024.</p>
+            <p>Dernière mise à jour le: 2 fevrier 2024.</p>
         </div>
     </div>
 

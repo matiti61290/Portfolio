@@ -1,8 +1,10 @@
 <script setup>
+// Import components and ref
 import { ref } from "vue";
 import Modal from "./Modal.vue";
-import contactForm from "../views/contact.vue"
+import contactForm from "./contact.vue"
 
+// define visible constants for each modal
 const modals = ref({
   cv:{ visible: false },
   cc:{ visible: false },
@@ -21,6 +23,7 @@ const closeModal = (modals) => {
 <template>
   <img src="../" alt="">
   <main>
+    <!-- About me -->
     <div id="about-me">
       <h1><img class="icon" src="../assets/img/about_icon.png" alt="about me icon">A propos de moi</h1>
       <p>Je m'appelle Mathieu Barbey. Je suis un étudiant fraichement diplômé d'un master en science de la Terre et des
@@ -30,12 +33,16 @@ const closeModal = (modals) => {
         j'ai decidé de me lancer dans le développement web au travers de la formation proposée par le CEF.
       </p>
     </div>
+
+    <!-- My creations -->
     <div id="mes-creations">
       <h1><img src="../assets/img/creation_icon.png" alt="" class="icon">Mes créations</h1>
       <div class="creation">
+
         <div class="creation-detail">
           <h2>Mon CV en HTML</h2>
           <img id="modal-image" @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
+          <!-- Modal CV -->
           <Modal v-if="modals.cv.visible" @modal-close="closeModal(modals.cv)" name="first-modal">
             <template class="modal" #header>
               <h3>Mon CV en HTML</h3>
@@ -49,9 +56,11 @@ const closeModal = (modals) => {
             <template class="modal" #footer></template>
           </Modal>
         </div>
+
         <div class="creation-detail">
           <h2>Exemple de cahier des charges</h2>
           <img id="modal-image" @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
+          <!-- Modal Cahier des charges -->
           <Modal v-if="modals.cc.visible" @modal-close="closeModal(modals.cc)" name="second-modal">
             <template #header>
               <h3>Exemple de cahier des charges</h3>
@@ -64,9 +73,11 @@ const closeModal = (modals) => {
             <template class="modal" #footer></template>
           </Modal>
         </div>
+
         <div class="creation-detail">
           <h2>Dynamiser un espace de commentaire</h2>
           <img id="modal-image" @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
+          <!-- Modal dynamiser un espace commentaire -->
           <Modal v-if="modals.comm.visible" @modal-close="closeModal(modals.comm)" name="third-modal">
             <template #header>
               <h3>Dynamiser un espace commentaire</h3>
@@ -84,6 +95,8 @@ const closeModal = (modals) => {
         </div>
       </div>
     </div>
+
+    <!-- Contact form -->
     <div id="Contact">
       <contactForm />
     </div>
@@ -100,7 +113,8 @@ main{
 #about-me{
   font-family: Trispace;
   color: white;
-  margin-left: 30px;
+
+  margin-left: 100px;
   background-color: #205673;
   padding: 20px 20px 20px 30px;
   border-radius: 50px;
@@ -115,7 +129,7 @@ main{
 }
 
 #about-me:hover h1{
-  transition: 2s;
+  transition: 1s;
   text-decoration-color: white;
 }
 
@@ -127,13 +141,16 @@ main{
 
 #mes-creations{
   background-color: #205673;
+  margin: 0 100px 50px 100px;
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 50px;
   height: auto;
+  border-radius: 50px;
+
   font-family: trispace;
   color: white;
-  border-radius: 50px;
+  
 }
 
 #mes-creations h1{
@@ -143,7 +160,7 @@ main{
 }
 
 #mes-creations:hover h1{
-  transition: 2s;
+  transition: 1s;
   text-decoration-color: white;
 }
 

@@ -1,6 +1,7 @@
 <script>
   import emailjs from '@emailjs/browser';
 
+  // init emailjs with public key
   emailjs.init('1oFyPt_ixXmtaAEqV');
 
   const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -8,6 +9,7 @@
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
 export default {
+  // define variables for user mail and for sending success
   data() {
     return {
       formData: {
@@ -21,6 +23,7 @@ export default {
     }
   },
   methods: {
+    // function for send message and control if success or fail
     sendEmail() {
       emailjs.sendForm(serviceId, templateId, this.$refs.form, publicKey)
         .then((result) => {
@@ -64,21 +67,20 @@ export default {
 #contact{
   background-color: #205673;
   height: auto;
-  margin-top: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  margin: 0 100px 0 100px;
+  padding: 20px 10px 30px 10px;
+  border-radius: 50px;
+  
+  font-size: 1.2em;
   color: white;
   font-family: Trispace;
-  border-radius: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 1.2em;
 }
 
 h1{
   background-color: #205673;
-  font-size: 2.5em;
   padding-left: 10px;
+
+  font-size: 2.5em;
 }
 
 #contact h1{
@@ -115,8 +117,9 @@ input{
   border-color: black;
   border-radius: 50px;
   width: 40%;
-  font-family: Trispace;
   padding-left: 10px;
+
+  font-family: Trispace;
 }
 
 textarea{
@@ -124,10 +127,11 @@ textarea{
   border-color: black;
   border-radius: 10px;
   height: 15em;
-  font-family: Trispace;
   padding-left: 10px;
   padding-top: 5px;
+  
   color: rgb(0, 0, 0);
+  font-family: Trispace;
 }
 
 button{
@@ -137,15 +141,16 @@ button{
   border-color: black;
   width: 200px;
   margin: auto;
-  color: white;
-  font-family: Trispace;
   padding: 10px 10px;
-  font-size: 1.2em;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  color: white;
+  font-family: Trispace;
+  font-size: 1.2em;
 }
 
 #button-image{

@@ -13,14 +13,15 @@
 
 #error-message{
   background-color: #205673;
-  font-family: 'Trispace';
-  color: white;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px;
   border-radius: 50px;
+
+  font-family: Trispace;
+  color: white;
 }
 
 #error-title{
