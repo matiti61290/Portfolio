@@ -1,7 +1,3 @@
-<script >
-
-</script>
-
 <template>
     <div id="home">
         <a href="#top" id="home_button">
@@ -62,12 +58,13 @@ nav{
     flex-direction: row;
     height: 100px;
     margin-right: 30em;
-    list-style: none;
     border: 50px;
     background: transparent;
     transition: 0.4s;
     gap: 30px;
     padding-left: 10em;
+
+    list-style: none;
 }
 
 #header_icon{
@@ -85,11 +82,12 @@ nav{
     /* text */
     display: flex;
     align-items: center;
+    width: 10em;
+    text-decoration: none;
+
     font-family: 'Trispace';
     font-size: 1.5em;
     color: white;
-    width: 10em;
-    text-decoration: none;
 }
 
 #top_menu:hover{

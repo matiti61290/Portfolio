@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import home from '../components/home.vue';
-import errorPage from '../views/errorPage.vue'
+import errorPage from '../components/errorPage.vue'
 
 const routes = [
     {

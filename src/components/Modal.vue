@@ -1,9 +1,12 @@
 <script setup>
-import { defineProps, defineEmits, ref } from "vue";
+// Import attribute from vue
+import { defineEmits, ref } from "vue";
 import {onClickOutside} from '@vueuse/core'
 
+// close modal on click button
 const emit = defineEmits(["modal-close"]);
 
+// close modal on click outside
 const target = ref(null)
 onClickOutside(target, ()=>emit('modal-close'))
 
@@ -74,15 +77,16 @@ onClickOutside(target, ()=>emit('modal-close'))
 }
 
 button{
-  color: white;
-  font-family: trispace;
-  font-size: 1.5em;
   background-color: #205673;
   border-radius: 50px;
   width: 5em;
   height: 2em;
   box-shadow: 0 0 10px 0 #205673;
   border: none;
+
+  color: white;
+  font-family: trispace;
+  font-size: 1.5em;
 }
 
 </style>
