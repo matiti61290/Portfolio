@@ -21,14 +21,13 @@ const closeModal = (modals) => {
 </script>
 
 <template>
-  <img src="../" alt="">
   <main>
     <!-- About me -->
     <div id="about-me">
       <h1><img class="icon" src="../assets/img/about_icon.png" alt="about me icon">A propos de moi</h1>
       <p>Je m'appelle Mathieu Barbey. Je suis un étudiant fraichement diplômé d'un master en science de la Terre et des
-        planètes au cours duquel j'ai pu au travers
-        mes stages développer un attrait pour la programmation et la modélisation numérique. Suite à l'obtiention de mon
+        planètes. Durant celui-ci, j'ai pu, au travers
+        mes stages, développer un attrait pour la programmation et la modélisation numérique. Suite à l'obtiention de mon
         diplôme,
         j'ai decidé de me lancer dans le développement web au travers de la formation proposée par le CEF.
       </p>
@@ -36,12 +35,12 @@ const closeModal = (modals) => {
 
     <!-- My creations -->
     <div id="mes-creations">
-      <h1><img src="../assets/img/creation_icon.png" alt="" class="icon">Mes créations</h1>
+      <h1><img src="../assets/img/creation_icon.png" alt="" class="my creations icon">Mes créations</h1>
       <div class="creation">
 
         <div class="creation-detail">
           <h2>Mon CV en HTML</h2>
-          <img id="modal-image" @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
+          <img class="modal-image" @click="openModal(modals.cv)" src="../assets/img/cv.png" alt="">
           <!-- Modal CV -->
           <Modal v-if="modals.cv.visible" @modal-close="closeModal(modals.cv)" name="first-modal">
             <template class="modal" #header>
@@ -59,7 +58,7 @@ const closeModal = (modals) => {
 
         <div class="creation-detail">
           <h2>Exemple de cahier des charges</h2>
-          <img id="modal-image" @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
+          <img class="modal-image" @click="openModal(modals.cc)" src="../assets/img/bloc-notes.png" alt="">
           <!-- Modal Cahier des charges -->
           <Modal v-if="modals.cc.visible" @modal-close="closeModal(modals.cc)" name="second-modal">
             <template #header>
@@ -75,8 +74,8 @@ const closeModal = (modals) => {
         </div>
 
         <div class="creation-detail">
-          <h2>Dynamiser un espace de commentaire</h2>
-          <img id="modal-image" @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
+          <h2>Dynamiser un espace commentaire</h2>
+          <img class="modal-image" @click="openModal(modals.comm)" src="../assets/img/commentaires.png" alt="">
           <!-- Modal dynamiser un espace commentaire -->
           <Modal v-if="modals.comm.visible" @modal-close="closeModal(modals.comm)" name="third-modal">
             <template #header>
@@ -87,7 +86,7 @@ const closeModal = (modals) => {
               <p>Tech utilisées: HTML 5, CSS 3 et Javascript ES6</p>
               <p>Lien PDF: <a href="https://github.com/matiti61290/Form-JS-Formation" target="_blank">Exemple
                   de
-                  dynamisation d'un espace de commentaire</a>
+                  dynamisation d'un espace commentaire</a>
               </p>
             </template>
             <template #footer></template>
@@ -181,7 +180,7 @@ main{
   background-color: inherit;
 }
 
-#modal-image{
+.modal-image{
   width: 60px;
   margin-bottom: 30px;
 }

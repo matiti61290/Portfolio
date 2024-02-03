@@ -1,8 +1,8 @@
 <template>
     <div id="error-message">
         <h1 id="error-title">Error 404</h1>
-        <p id="error-text">Vous avez voyagé au delà de la galaxie.</p>
-        <p id="error-text">Revenez sur Terre avec la fusée.</p>
+        <p class="error-text">Vous avez voyagé au delà de la galaxie.</p>
+        <p class="error-text">Revenez sur Terre avec la fusée.</p>
         <RouterLink to="/" id="back_to_home_button">
             <img id="fusee" src="../assets/img/fusee.png" alt="">
         </RouterLink>
@@ -28,7 +28,7 @@
     background-color: #205673;
 }
 
-#error-text{
+.error-text{
     background-color: #205673;
 }
 

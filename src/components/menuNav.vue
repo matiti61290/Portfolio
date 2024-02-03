@@ -4,9 +4,9 @@
             <img id="home_picture" src="../assets/img/home_icon.png" alt="icone planete">
         </a>
         <nav>
-            <a href="#about-me" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite"> A propos de moi</a>
-            <a href="#mes-creations" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Mes creations</a>
-            <a href="***" id="top_menu"><img id="header_icon" src="../assets/img/satellite.png" alt="satellite">Contact</a>
+            <a href="#about-me" class="top_menu"><img class="header_icon" src="../assets/img/satellite.png" alt="satellite"> A propos de moi</a>
+            <a href="#mes-creations" class="top_menu"><img class="header_icon" src="../assets/img/satellite.png" alt="satellite">Mes creations</a>
+            <a href="#contact" class="top_menu"><img class="header_icon" src="../assets/img/satellite.png" alt="satellite">Contact</a>
         </nav>
     </div>
 </template>
@@ -67,13 +67,13 @@ nav{
     list-style: none;
 }
 
-#header_icon{
+.header_icon{
     width: 50px;
     filter: invert(100);
     background-color: #20567300;
 }
 
-#top_menu{
+.top_menu{
     background-color: #205673;
     padding: 15px;
     border-radius: 50px;
@@ -90,7 +90,7 @@ nav{
     color: white;
 }
 
-#top_menu:hover{
+.top_menu:hover{
     background-color: #31305dff;
     transition: 0.3s;
     width: 10em;
